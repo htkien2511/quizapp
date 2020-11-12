@@ -116,13 +116,25 @@ extension StartQuizViewController: UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        let label = UILabel(frame: CGRect.zero)
-        label.text = questionData[indexPath.item].question! + questionData[indexPath.item].answer![0].answer! + questionData[indexPath.item].answer![1].answer! + questionData[indexPath.item].answer![2].answer! + questionData[indexPath.item].answer![3].answer!
-        label.sizeToFit()
-        print(label.frame.height)
+        // dynamic height & fixed width cell of collection view
+        let heightQuestion = getHeightLabelWith(text: questionData[indexPath.item].question!)
+        let answerQuestion1 = getHeightLabelWith(text: questionData[indexPath.item].answer![0].answer!)
+        let answerQuestion2 = getHeightLabelWith(text: questionData[indexPath.item].answer![1].answer!)
+        let answerQuestion3 = getHeightLabelWith(text: questionData[indexPath.item].answer![2].answer!)
+        let answerQuestion4 = getHeightLabelWith(text: questionData[indexPath.item].answer![3].answer!)
+        let heightCell = heightQuestion * 1.4 + answerQuestion1 + answerQuestion2 + answerQuestion3 + answerQuestion4 + 15
         return CGSize(width: collectionView.frame.size.width,
-                      height: 250)
+                      height: heightCell)
+    }
+    
+    private func getHeightLabelWith(text: String) -> CGFloat {
+        let question:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: clvStartQuiz.frame.size.width, height: CGFloat.greatestFiniteMagnitude))
+        question.numberOfLines = 0
+        question.lineBreakMode = NSLineBreakMode.byWordWrapping
+        question.font = UIFont(name: "SFProText-Medium", size: 17)
+        question.text = text
+        question.sizeToFit()
+        return question.frame.height > 30 ? question.frame.height : 30
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

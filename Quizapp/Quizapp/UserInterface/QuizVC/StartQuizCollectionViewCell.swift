@@ -18,6 +18,7 @@ class StartQuizCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var lbQuestion: UILabel!
     @IBOutlet var lbsAnswer: Array<UILabel>!
     @IBOutlet var btnAnswer: Array<UIButton>!
+    @IBOutlet weak var stackView: UIStackView!
     
     weak var delegate: GetResult?
     var questionObj: QuestionObj?

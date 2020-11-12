@@ -28,7 +28,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="388" height="300"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="A1p-Ul-Ged">
-                                <rect key="frame" x="6" y="96" width="376" height="204"/>
+                                <rect key="frame" x="6" y="95" width="376" height="200"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="miu-LL-HMz">
                                         <rect key="frame" x="0.0" y="0.0" width="376" height="50"/>
@@ -64,7 +64,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eOy-hU-VK6">
-                                        <rect key="frame" x="0.0" y="51.5" width="376" height="50"/>
+                                        <rect key="frame" x="0.0" y="50" width="376" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbw-QK-edB">
                                                 <rect key="frame" x="5" y="13" width="24" height="24"/>
@@ -97,7 +97,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YkE-c7-8V6">
-                                        <rect key="frame" x="0.0" y="102.5" width="376" height="50"/>
+                                        <rect key="frame" x="0.0" y="100" width="376" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXs-eg-AQs">
                                                 <rect key="frame" x="5" y="13" width="24" height="24"/>
@@ -130,7 +130,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FDr-vw-0Ck">
-                                        <rect key="frame" x="0.0" y="154" width="376" height="50"/>
+                                        <rect key="frame" x="0.0" y="150" width="376" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1T-l8-iM3">
                                                 <rect key="frame" x="5" y="13" width="24" height="24"/>
@@ -166,7 +166,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Khi có nhiều component được gắn các bộ lắng nghe của cùng một loại sự kiện thì các component nào sẽ nhận được sự kiện đầu tiên?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZZ-8q-Wph">
-                                <rect key="frame" x="6" y="6" width="376" height="90"/>
+                                <rect key="frame" x="6" y="6" width="376" height="81.5"/>
                                 <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -174,11 +174,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="A1p-Ul-Ged" firstAttribute="top" relation="greaterThanOrEqual" secondItem="XZZ-8q-Wph" secondAttribute="bottom" constant="5" id="5oG-NU-3db"/>
                             <constraint firstItem="XZZ-8q-Wph" firstAttribute="leading" secondItem="2MO-Xh-Mfa" secondAttribute="leading" constant="6" id="CDs-Dr-rDN"/>
                             <constraint firstItem="A1p-Ul-Ged" firstAttribute="trailing" secondItem="XZZ-8q-Wph" secondAttribute="trailing" id="F4k-s9-9ar"/>
-                            <constraint firstItem="XZZ-8q-Wph" firstAttribute="height" secondItem="2MO-Xh-Mfa" secondAttribute="height" multiplier="0.3" id="HSA-sB-Tep"/>
-                            <constraint firstAttribute="bottom" secondItem="A1p-Ul-Ged" secondAttribute="bottom" id="KQF-uI-84N"/>
-                            <constraint firstItem="A1p-Ul-Ged" firstAttribute="height" secondItem="2MO-Xh-Mfa" secondAttribute="height" multiplier="0.68" id="N81-LR-gud"/>
+                            <constraint firstAttribute="bottom" secondItem="A1p-Ul-Ged" secondAttribute="bottom" constant="5" id="KQF-uI-84N"/>
                             <constraint firstItem="A1p-Ul-Ged" firstAttribute="leading" secondItem="XZZ-8q-Wph" secondAttribute="leading" id="RD2-rK-V71"/>
                             <constraint firstAttribute="trailing" secondItem="XZZ-8q-Wph" secondAttribute="trailing" constant="6" id="RId-nm-aCI"/>
                             <constraint firstItem="XZZ-8q-Wph" firstAttribute="top" secondItem="2MO-Xh-Mfa" secondAttribute="top" constant="6" id="TNU-qA-L2B"/>
@@ -196,6 +195,7 @@
             <size key="customSize" width="388" height="306"/>
             <connections>
                 <outlet property="lbQuestion" destination="XZZ-8q-Wph" id="fDH-1f-gw4"/>
+                <outlet property="stackView" destination="A1p-Ul-Ged" id="cyu-jL-a1l"/>
                 <outletCollection property="lbsAnswer" destination="IWl-MZ-714" collectionClass="NSMutableArray" id="PfB-nX-Bu6"/>
                 <outletCollection property="lbsAnswer" destination="Q0R-7t-hjE" collectionClass="NSMutableArray" id="DwL-z5-WrM"/>
                 <outletCollection property="lbsAnswer" destination="M5e-Qo-38c" collectionClass="NSMutableArray" id="ZhR-sn-lec"/>
