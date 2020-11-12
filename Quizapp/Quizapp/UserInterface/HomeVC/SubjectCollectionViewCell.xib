@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProText-Regular.ttf">
+            <string>SFProText-Regular</string>
+        </array>
+        <array key="SFUIDisplay-Semibold.ttf">
+            <string>SFUIDisplay-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SubjectCollectionViewCell" customModule="Quizapp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="318" height="134"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="318" height="134"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W7G-E4-NhK">
+                        <rect key="frame" x="0.0" y="0.0" width="318" height="134"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LẬP TRÌNH MẠNG" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UQj-8J-ix0">
+                                <rect key="frame" x="16" y="38.5" width="286" height="30.5"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deadline:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syk-cB-B3P">
+                                <rect key="frame" x="16" y="79" width="71.5" height="20"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="9:26:30 PM 7/11/2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqo-Vy-Odc">
+                                <rect key="frame" x="95.5" y="79" width="206.5" height="20"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UQj-8J-ix0" firstAttribute="centerY" secondItem="W7G-E4-NhK" secondAttribute="centerY" multiplier="0.8" id="0Ix-aD-6DO"/>
+                            <constraint firstItem="UQj-8J-ix0" firstAttribute="width" secondItem="W7G-E4-NhK" secondAttribute="width" multiplier="0.9" id="Jwg-wg-x4X"/>
+                            <constraint firstItem="wqo-Vy-Odc" firstAttribute="leading" secondItem="Syk-cB-B3P" secondAttribute="trailing" constant="8" id="QOU-9z-Wa8"/>
+                            <constraint firstItem="UQj-8J-ix0" firstAttribute="centerX" secondItem="W7G-E4-NhK" secondAttribute="centerX" id="Qa1-kI-7yx"/>
+                            <constraint firstItem="Syk-cB-B3P" firstAttribute="top" secondItem="UQj-8J-ix0" secondAttribute="bottom" constant="10" id="XUj-T0-MRZ"/>
+                            <constraint firstItem="wqo-Vy-Odc" firstAttribute="trailing" secondItem="UQj-8J-ix0" secondAttribute="trailing" id="ejk-I4-5KH"/>
+                            <constraint firstItem="UQj-8J-ix0" firstAttribute="height" relation="lessThanOrEqual" secondItem="W7G-E4-NhK" secondAttribute="height" multiplier="0.7" id="q7J-gw-1tZ"/>
+                            <constraint firstItem="wqo-Vy-Odc" firstAttribute="centerY" secondItem="Syk-cB-B3P" secondAttribute="centerY" id="sYl-ww-fni"/>
+                            <constraint firstItem="Syk-cB-B3P" firstAttribute="leading" secondItem="UQj-8J-ix0" secondAttribute="leading" id="xxb-hK-obo"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="W7G-E4-NhK" secondAttribute="bottom" id="G9x-Cm-OPJ"/>
+                <constraint firstItem="W7G-E4-NhK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Om2-hC-14c"/>
+                <constraint firstAttribute="trailing" secondItem="W7G-E4-NhK" secondAttribute="trailing" id="cgk-oB-mXs"/>
+                <constraint firstItem="W7G-E4-NhK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="p9u-9N-B0E"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="318" height="134"/>
+            <connections>
+                <outlet property="lbDeadline" destination="wqo-Vy-Odc" id="afl-09-eCw"/>
+                <outlet property="lbSubject" destination="UQj-8J-ix0" id="ZAF-fR-nDQ"/>
+            </connections>
+            <point key="canvasLocation" x="331.8840579710145" y="164.73214285714286"/>
+        </collectionViewCell>
+    </objects>
+</document>

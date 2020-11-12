@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProText-Medium.ttf">
+            <string>SFProText-Medium</string>
+        </array>
+        <array key="SFProText-Regular.ttf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="StartQuizCollectionViewCell" customModule="Quizapp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="388" height="300"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="388" height="300"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2MO-Xh-Mfa">
+                        <rect key="frame" x="0.0" y="0.0" width="388" height="300"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="A1p-Ul-Ged">
+                                <rect key="frame" x="6" y="96" width="376" height="204"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="miu-LL-HMz">
+                                        <rect key="frame" x="0.0" y="0.0" width="376" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYK-XZ-Qqw">
+                                                <rect key="frame" x="5" y="13" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="Kgf-gR-4EK"/>
+                                                    <constraint firstAttribute="height" constant="24" id="dJ7-Tj-Fvg"/>
+                                                </constraints>
+                                                <state key="normal" image="uncheck"/>
+                                                <connections>
+                                                    <action selector="chooseAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="b0d-Zr-wRg"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Component đầu tiên được gắn bộ lắng nghe" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWl-MZ-714">
+                                                <rect key="frame" x="34" y="0.0" width="342" height="50"/>
+                                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="IWl-MZ-714" firstAttribute="centerY" secondItem="TYK-XZ-Qqw" secondAttribute="centerY" id="9Th-En-kuX"/>
+                                            <constraint firstAttribute="trailing" secondItem="IWl-MZ-714" secondAttribute="trailing" id="CMB-fT-Wh3"/>
+                                            <constraint firstAttribute="bottom" secondItem="IWl-MZ-714" secondAttribute="bottom" id="EPY-1g-95W"/>
+                                            <constraint firstItem="IWl-MZ-714" firstAttribute="leading" secondItem="TYK-XZ-Qqw" secondAttribute="trailing" constant="5" id="Ezn-Am-qal"/>
+                                            <constraint firstItem="TYK-XZ-Qqw" firstAttribute="leading" secondItem="miu-LL-HMz" secondAttribute="leading" constant="5" id="YfU-RF-PzN"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="chK-W6-jPH"/>
+                                            <constraint firstItem="TYK-XZ-Qqw" firstAttribute="centerY" secondItem="miu-LL-HMz" secondAttribute="centerY" id="dxI-Yv-OnO"/>
+                                            <constraint firstItem="IWl-MZ-714" firstAttribute="top" secondItem="miu-LL-HMz" secondAttribute="top" id="vNi-8x-e2d"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eOy-hU-VK6">
+                                        <rect key="frame" x="0.0" y="51.5" width="376" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbw-QK-edB">
+                                                <rect key="frame" x="5" y="13" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="dzw-it-UcJ"/>
+                                                    <constraint firstAttribute="width" constant="24" id="iyi-4X-ocb"/>
+                                                </constraints>
+                                                <state key="normal" image="uncheck"/>
+                                                <connections>
+                                                    <action selector="chooseAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="HcH-wY-t6f"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Component cuối cùng được gắn bộ lắng nghe" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0R-7t-hjE">
+                                                <rect key="frame" x="34" y="0.0" width="342" height="50"/>
+                                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Jbw-QK-edB" firstAttribute="centerY" secondItem="eOy-hU-VK6" secondAttribute="centerY" id="0zj-sm-Mfw"/>
+                                            <constraint firstItem="Jbw-QK-edB" firstAttribute="leading" secondItem="eOy-hU-VK6" secondAttribute="leading" constant="5" id="3ai-EW-e55"/>
+                                            <constraint firstItem="Q0R-7t-hjE" firstAttribute="centerY" secondItem="Jbw-QK-edB" secondAttribute="centerY" id="BIU-Uz-3Nc"/>
+                                            <constraint firstAttribute="bottom" secondItem="Q0R-7t-hjE" secondAttribute="bottom" id="c6Z-TI-oWW"/>
+                                            <constraint firstItem="Q0R-7t-hjE" firstAttribute="leading" secondItem="Jbw-QK-edB" secondAttribute="trailing" constant="5" id="dgE-KM-dwc"/>
+                                            <constraint firstItem="Q0R-7t-hjE" firstAttribute="top" secondItem="eOy-hU-VK6" secondAttribute="top" id="puy-Of-rs0"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="vwm-2R-zOb"/>
+                                            <constraint firstAttribute="trailing" secondItem="Q0R-7t-hjE" secondAttribute="trailing" id="wC4-a1-h7x"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YkE-c7-8V6">
+                                        <rect key="frame" x="0.0" y="102.5" width="376" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXs-eg-AQs">
+                                                <rect key="frame" x="5" y="13" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="DGL-QM-EOZ"/>
+                                                    <constraint firstAttribute="height" constant="24" id="xiB-4G-b0F"/>
+                                                </constraints>
+                                                <state key="normal" image="uncheck"/>
+                                                <connections>
+                                                    <action selector="chooseAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="6hO-tw-KHt"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Không thể xác định component nào sẽ nhận trước" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5e-Qo-38c">
+                                                <rect key="frame" x="34" y="0.0" width="342" height="50"/>
+                                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="M5e-Qo-38c" secondAttribute="trailing" id="CQ8-0b-Uxg"/>
+                                            <constraint firstItem="zXs-eg-AQs" firstAttribute="leading" secondItem="YkE-c7-8V6" secondAttribute="leading" constant="5" id="VEY-Q1-dpb"/>
+                                            <constraint firstAttribute="bottom" secondItem="M5e-Qo-38c" secondAttribute="bottom" id="YBV-Cg-k4j"/>
+                                            <constraint firstItem="zXs-eg-AQs" firstAttribute="centerY" secondItem="YkE-c7-8V6" secondAttribute="centerY" id="ebR-Sq-Z0A"/>
+                                            <constraint firstItem="M5e-Qo-38c" firstAttribute="centerY" secondItem="zXs-eg-AQs" secondAttribute="centerY" id="iV0-Wm-aqj"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="piO-e9-Lgw"/>
+                                            <constraint firstItem="M5e-Qo-38c" firstAttribute="top" secondItem="YkE-c7-8V6" secondAttribute="top" id="s0C-Lo-Z8I"/>
+                                            <constraint firstItem="M5e-Qo-38c" firstAttribute="leading" secondItem="zXs-eg-AQs" secondAttribute="trailing" constant="5" id="s0P-kf-JbS"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FDr-vw-0Ck">
+                                        <rect key="frame" x="0.0" y="154" width="376" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1T-l8-iM3">
+                                                <rect key="frame" x="5" y="13" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="cQ6-LY-YYO"/>
+                                                    <constraint firstAttribute="height" constant="24" id="m1L-Os-XkQ"/>
+                                                </constraints>
+                                                <state key="normal" image="uncheck"/>
+                                                <connections>
+                                                    <action selector="chooseAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="PZj-F5-c7b"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Không thể có nhiều hơn một bộ lắng nghe cho cùng một loại sự kiện" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOt-w5-Fo0">
+                                                <rect key="frame" x="34" y="0.0" width="342" height="50"/>
+                                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="O1T-l8-iM3" firstAttribute="centerY" secondItem="FDr-vw-0Ck" secondAttribute="centerY" id="37L-W3-b82"/>
+                                            <constraint firstItem="YOt-w5-Fo0" firstAttribute="leading" secondItem="O1T-l8-iM3" secondAttribute="trailing" constant="5" id="47K-wj-1ax"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="7Lg-I5-3Bz"/>
+                                            <constraint firstItem="YOt-w5-Fo0" firstAttribute="centerY" secondItem="O1T-l8-iM3" secondAttribute="centerY" id="IeX-BK-Vp5"/>
+                                            <constraint firstItem="YOt-w5-Fo0" firstAttribute="top" secondItem="FDr-vw-0Ck" secondAttribute="top" id="bYS-SD-41O"/>
+                                            <constraint firstItem="O1T-l8-iM3" firstAttribute="leading" secondItem="FDr-vw-0Ck" secondAttribute="leading" constant="5" id="qcJ-s6-uaL"/>
+                                            <constraint firstAttribute="bottom" secondItem="YOt-w5-Fo0" secondAttribute="bottom" id="wEU-uc-12T"/>
+                                            <constraint firstAttribute="trailing" secondItem="YOt-w5-Fo0" secondAttribute="trailing" id="wUq-nB-CXM"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Khi có nhiều component được gắn các bộ lắng nghe của cùng một loại sự kiện thì các component nào sẽ nhận được sự kiện đầu tiên?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZZ-8q-Wph">
+                                <rect key="frame" x="6" y="6" width="376" height="90"/>
+                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XZZ-8q-Wph" firstAttribute="leading" secondItem="2MO-Xh-Mfa" secondAttribute="leading" constant="6" id="CDs-Dr-rDN"/>
+                            <constraint firstItem="A1p-Ul-Ged" firstAttribute="trailing" secondItem="XZZ-8q-Wph" secondAttribute="trailing" id="F4k-s9-9ar"/>
+                            <constraint firstItem="XZZ-8q-Wph" firstAttribute="height" secondItem="2MO-Xh-Mfa" secondAttribute="height" multiplier="0.3" id="HSA-sB-Tep"/>
+                            <constraint firstAttribute="bottom" secondItem="A1p-Ul-Ged" secondAttribute="bottom" id="KQF-uI-84N"/>
+                            <constraint firstItem="A1p-Ul-Ged" firstAttribute="height" secondItem="2MO-Xh-Mfa" secondAttribute="height" multiplier="0.68" id="N81-LR-gud"/>
+                            <constraint firstItem="A1p-Ul-Ged" firstAttribute="leading" secondItem="XZZ-8q-Wph" secondAttribute="leading" id="RD2-rK-V71"/>
+                            <constraint firstAttribute="trailing" secondItem="XZZ-8q-Wph" secondAttribute="trailing" constant="6" id="RId-nm-aCI"/>
+                            <constraint firstItem="XZZ-8q-Wph" firstAttribute="top" secondItem="2MO-Xh-Mfa" secondAttribute="top" constant="6" id="TNU-qA-L2B"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="2MO-Xh-Mfa" secondAttribute="trailing" id="KYW-mS-IXF"/>
+                <constraint firstItem="2MO-Xh-Mfa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="eKO-jt-CsI"/>
+                <constraint firstAttribute="bottom" secondItem="2MO-Xh-Mfa" secondAttribute="bottom" id="fEk-I8-Fnh"/>
+                <constraint firstItem="2MO-Xh-Mfa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gGp-eR-IXj"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="388" height="306"/>
+            <connections>
+                <outlet property="lbQuestion" destination="XZZ-8q-Wph" id="fDH-1f-gw4"/>
+                <outletCollection property="lbsAnswer" destination="IWl-MZ-714" collectionClass="NSMutableArray" id="PfB-nX-Bu6"/>
+                <outletCollection property="lbsAnswer" destination="Q0R-7t-hjE" collectionClass="NSMutableArray" id="DwL-z5-WrM"/>
+                <outletCollection property="lbsAnswer" destination="M5e-Qo-38c" collectionClass="NSMutableArray" id="ZhR-sn-lec"/>
+                <outletCollection property="lbsAnswer" destination="YOt-w5-Fo0" collectionClass="NSMutableArray" id="dix-Pl-ywD"/>
+                <outletCollection property="btnAnswer" destination="TYK-XZ-Qqw" collectionClass="NSMutableArray" id="Hnx-R2-dEE"/>
+                <outletCollection property="btnAnswer" destination="Jbw-QK-edB" collectionClass="NSMutableArray" id="c26-36-uKh"/>
+                <outletCollection property="btnAnswer" destination="zXs-eg-AQs" collectionClass="NSMutableArray" id="F8M-yv-yxo"/>
+                <outletCollection property="btnAnswer" destination="O1T-l8-iM3" collectionClass="NSMutableArray" id="pIY-Ce-psk"/>
+            </connections>
+            <point key="canvasLocation" x="326.08695652173918" y="168.75"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="uncheck" width="24" height="24"/>
+    </resources>
+</document>
