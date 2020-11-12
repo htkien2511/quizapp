@@ -50,6 +50,7 @@ class StartQuizViewController: UIViewController {
     private func startOtpTimer() {
         self.totalTime = time * 60
         self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateTimer), userInfo: nil, repeats: true)
+        RunLoop.current.add(timer!, forMode: .common)
     }
     
     @objc func updateTimer() {
