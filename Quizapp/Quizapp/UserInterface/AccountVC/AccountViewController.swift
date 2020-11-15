@@ -35,6 +35,7 @@ class AccountViewController: UIViewController {
     }
     
     func loadData() {
+        LoadingDialog.showLoadingDialog(self)
         let parameter: Parameters = [
             "id_user": idUser
         ]
@@ -44,6 +45,7 @@ class AccountViewController: UIViewController {
                     
                 }
                 else {
+                    self.dismiss(animated: true, completion: nil)
                     self.lbUserName.text = userResponse.name!
                     self.lbUserClass.text = userResponse.classUser!
                     self.lbUserMssv.text = userResponse.mssv!

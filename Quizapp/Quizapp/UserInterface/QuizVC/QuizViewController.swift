@@ -106,6 +106,10 @@ extension QuizViewController: FinishQuiz {
                 print(errorMessage)
             }
         }
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.toggleParamIsDataChangedInHistoryVC()
+        appDelegate.toggleParamIsDataChangedInHomeVC()
     }
     
     

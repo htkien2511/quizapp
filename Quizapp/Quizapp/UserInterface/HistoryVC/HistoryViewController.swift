@@ -17,6 +17,7 @@ class HistoryViewController: UIViewController {
         let defaults = UserDefaults.standard
         return defaults.value(forKey: "idUser") as! String
     }()
+    var isDidLoad: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +25,21 @@ class HistoryViewController: UIViewController {
         setUpNavigation()
         registerCell()
         setUpQuizClv()
-//        loadData()
+        loadData()
+        isDidLoad = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        loadData()
+        if !isDidLoad {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let isDataChanged = appDelegate.isDataChangedInHistoryVC
+            if isDataChanged {
+                loadData()
+                appDelegate.toggleParamIsDataChangedInHistoryVC()
+            }
+        }
+        isDidLoad = false
     }
     
     func setUpNavigation() {

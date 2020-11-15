@@ -12,6 +12,8 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    var isDataChangedInHomeVC: Bool = false
+    var isDataChangedInHistoryVC: Bool = false
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -48,6 +50,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 window.makeKeyAndVisible()
             }, completion: nil)
         }
+    }
+    
+    func toggleParamIsDataChangedInHomeVC() {
+        isDataChangedInHomeVC = !isDataChangedInHomeVC
+    }
+    
+    func toggleParamIsDataChangedInHistoryVC() {
+        isDataChangedInHistoryVC = !isDataChangedInHistoryVC
     }
 }
 

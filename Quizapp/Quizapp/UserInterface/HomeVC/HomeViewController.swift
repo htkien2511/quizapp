@@ -17,6 +17,7 @@ class HomeViewController: UIViewController {
         let defaults = UserDefaults.standard
         return defaults.value(forKey: "idUser") as! String
     }()
+    var isDidLoad: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,13 +26,21 @@ class HomeViewController: UIViewController {
         setUpNavigation()
         registerCell()
         setUpQuizClv()
-//        loadData()
-        
+        loadData()
+        isDidLoad = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        loadData()
+        if !isDidLoad {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let isDataChanged = appDelegate.isDataChangedInHomeVC
+            if isDataChanged {
+                loadData()
+                appDelegate.toggleParamIsDataChangedInHomeVC()
+            }
+        }
+        isDidLoad = false
     }
     
     func setUpNavigation() {
