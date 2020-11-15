@@ -42,13 +42,13 @@ class StartQuizViewController: UIViewController {
     
     func config() {
         lbName.text = name
-        lbTime.text = "\(time)"
+        lbTime.text = timeFormatted(time * 60)
         btnSubmit.layer.borderWidth = CGFloat(1)
     }
     
     
     private func startOtpTimer() {
-        self.totalTime = time * 60
+        self.totalTime = time * 60 - 1
         self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateTimer), userInfo: nil, repeats: true)
         RunLoop.current.add(timer!, forMode: .common)
     }

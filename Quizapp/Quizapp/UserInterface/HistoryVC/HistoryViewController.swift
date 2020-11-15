@@ -40,16 +40,16 @@ class HistoryViewController: UIViewController {
     }
 
     func loadData() {
-//        LoadingDialog.showLoadingDialog(self)
+        LoadingDialog.showLoadingDialog(self)
         let parameter: Parameters = [
             "id_user": idUser
         ]
         let _ = APIManager.sharedInstance.getCompletedSubjects(queryParam: parameter) { (arrayCompletedSubjectResponse, error) in
             if let arrayCompletedSubjectResponse = arrayCompletedSubjectResponse as? ArrayCompletedSubjectResponse, let completedSubjectResponse = arrayCompletedSubjectResponse.data {
                 
+                self.dismiss(animated: true, completion: nil)
                 self.completedSubjectData = completedSubjectResponse
                 self.clvHistory.reloadData()
-//                self.dismiss(animated: true, completion: nil)
                 
             } else if let errorMessage = error {
                 

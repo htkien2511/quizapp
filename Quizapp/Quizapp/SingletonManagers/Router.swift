@@ -16,7 +16,8 @@ enum Router: URLRequestConvertible {
     case checkLogin(queryParams: Parameters)
     case getInfoUser(queryParams: Parameters)
     
-    static let quizAppServer = "http://localhost:5000"
+//    static let quizAppServer = "http://localhost:5000"
+    static let quizAppServer = "https://htkien-quiz-app.herokuapp.com"
     
     var method: HTTPMethod {
         switch self {

@@ -42,13 +42,13 @@ class HomeViewController: UIViewController {
     }
     
     func loadData() {
-//        LoadingDialog.showLoadingDialog(self)
+        LoadingDialog.showLoadingDialog(self)
         let parameter: Parameters = [
             "id_user": idUser
         ]
         let _ = APIManager.sharedInstance.getValidSubjects(queryParam: parameter) { (subjectResponse, error) in
             if let subjectResponse = subjectResponse as? ArraySubjectResponse {
-//                self.dismiss(animated: true, completion: nil)
+                self.dismiss(animated: true, completion: nil)
                 self.subjectData = subjectResponse.data!
                 self.clvQuiz.reloadData()
                 
